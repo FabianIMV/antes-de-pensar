@@ -1,8 +1,8 @@
 # antes de pensar
 
-Un ejercicio breve, en español, de **primera impresión**: registrás lo primero
+Un ejercicio breve, en español, de **primera impresión**: registras lo primero
 que asoma —una palabra, una temperatura, un movimiento— *antes* de ver un
-blanco oculto, y después evaluás con honestidad qué resonó de verdad.
+blanco oculto, y después evalúas con honestidad qué resonó de verdad.
 
 Se inspira en los protocolos de "primera impresión" de la visión remota y el
 *thin-slicing* (juicio rápido, previo al análisis), y en la idea de Bardon de
@@ -23,29 +23,29 @@ navegador; el historial se guarda solo en `localStorage` del dispositivo.
    libre en un lienzo pequeño. El tiempo corto fuerza lo pre-analítico.
 4. **Revelación** — se muestra el blanco, su nombre y sus cualidades, junto a
    un recordatorio rotativo contra el sesgo de confirmación.
-5. **Auto-evaluación** — marcás, honestamente, qué elementos de tu impresión
+5. **Auto-evaluación** — marcas, honestamente, qué elementos de tu impresión
    resonaron de verdad con lo que ya habías anotado (no con lo que te
    gustaría que coincidiera).
 6. **Historial** — la tasa de resonancia de cada ronda y una nota opcional
-   quedan guardadas en tu navegador. Podés ver la evolución o borrar todo.
+   quedan guardadas en tu navegador. Puedes ver la evolución o borrar todo.
 
 ## Publicar en GitHub Pages
 
-1. Subí este repositorio a GitHub (o hacé fork/clone del que ya tenés).
+1. Sube este repositorio a GitHub (o haz fork/clone del que ya tienes).
 2. En GitHub: **Settings → Pages**.
-3. En "Build and deployment" elegí **Deploy from a branch**.
-4. Elegí la branch (por ejemplo `main`) y la carpeta **/ (root)**.
-5. Guardá. GitHub publicará el sitio en unos minutos en
+3. En "Build and deployment" elige **Deploy from a branch**.
+4. Elige la branch (por ejemplo `main`) y la carpeta **/ (root)**.
+5. Guarda. GitHub publicará el sitio en unos minutos en
    `https://<tu-usuario>.github.io/<nombre-del-repo>/`.
 
 Las etiquetas `og:url`, `og:image` y `twitter:image` en `index.html` están
-apuntando a `https://fabianimv.github.io/antes-de-pensar/`. Si publicás el
-sitio bajo otro usuario o nombre de repositorio, actualizá esas tres líneas
+apuntando a `https://fabianimv.github.io/antes-de-pensar/`. Si publicas el
+sitio bajo otro usuario o nombre de repositorio, actualiza esas tres líneas
 en el `<head>` con la URL real, así las vistas previas en redes sociales
 muestran la imagen correcta.
 
-No hay build step: es HTML/CSS/JS servidos tal cual. Si querés probarlo en
-local antes de publicar, alcanza con levantar un servidor estático desde la
+No hay build step: es HTML/CSS/JS servidos tal cual. Si quieres probarlo en
+local antes de publicar, basta con levantar un servidor estático desde la
 raíz del repo, por ejemplo:
 
 ```bash
@@ -61,7 +61,7 @@ ese problema.)
 
 El pool vive en dos lugares:
 
-- **Imágenes**: `assets/img/targets/*.svg` (podés usar PNG o JPG también).
+- **Imágenes**: `assets/img/targets/*.svg` (puedes usar PNG o JPG también).
   Se recomienda arte simple y evocador —paisajes, objetos, texturas,
   arquetipos o símbolos— porque el objetivo es una impresión de cualidades
   (frío/cálido, quieto/en movimiento), no reconocer una foto realista.
@@ -70,8 +70,8 @@ El pool vive en dos lugares:
 
 Para agregar un blanco nuevo:
 
-1. Poné el archivo de imagen en `assets/img/targets/`.
-2. Agregá un objeto al array `TARGETS` en `js/targets.js`:
+1. Coloca el archivo de imagen en `assets/img/targets/`.
+2. Agrega un objeto al array `TARGETS` en `js/targets.js`:
 
 ```js
 {
