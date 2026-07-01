@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>antes de pensar — ejercicio de primera impresión</title>
+  <meta name="description" content="Un ejercicio breve para entrenar la primera impresión: registra tu impresión pre-analítica antes de ver un blanco oculto, luego revísala con honestidad. No promete poderes psíquicos: entrena el discernimiento." />
+  <meta name="theme-color" content="#0a0c18" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:url" content="https://fabianimv.github.io/antes-de-pensar/" />
+  <meta property="og:title" content="antes de pensar — ejercicio de primera impresión" />
+  <meta property="og:description" content="Registra tu impresión antes de ver el blanco oculto. Revísala con honestidad. Entrena el discernimiento, no la fantasía." />
+  <meta property="og:image" content="https://fabianimv.github.io/antes-de-pensar/assets/img/og/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="antes de pensar" />
+  <meta name="twitter:description" content="Un ejercicio de primera impresión: atrapa el destello antes de que la mente racional lo tape." />
+  <meta name="twitter:image" content="https://fabianimv.github.io/antes-de-pensar/assets/img/og/og-image.png" />
+
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <div id="app">
+    <header class="site-header">
+      <p class="marca">antes<span class="marca-guion">·</span>de<span class="marca-guion">·</span>pensar</p>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <button type="button" id="nav-historial" class="btn-nav">Historial</button>
+      </nav>
+    </header>
+
+    <main id="contenido">
+
+      <!-- ============ INICIO ============ -->
+      <section class="pantalla" id="pantalla-inicio" data-pantalla data-activa="true" aria-labelledby="titulo-inicio">
+        <div class="pantalla-cuerpo contenedor-angosto">
+          <p class="ojo-flotante" aria-hidden="true"></p>
+          <h1 id="titulo-inicio">antes de pensar</h1>
+          <p class="subtitulo">Un ejercicio de primera impresión.</p>
+
+          <p class="parrafo">
+            En un momento habrá un blanco oculto: una imagen o un símbolo que todavía
+            no puedes ver. Tu tarea es anotar lo primero que asoma —una palabra, una
+            temperatura, un movimiento— antes de que la cabeza empiece a explicar,
+            adivinar o decorar. Después se revela el blanco y evalúas, con honestidad,
+            qué resonó de verdad.
+          </p>
+
+          <details class="detalle-explicacion">
+            <summary>¿De dónde viene esto?</summary>
+            <p>
+              Se inspira en los protocolos de "primera impresión" que se usan en
+              visión remota y en el <em>thin-slicing</em> (juicios rápidos, previos
+              al análisis), y en la idea de Bardon de un lenguaje-imagen que habla
+              directo al subconsciente, sin pasar por la razón discursiva.
+            </p>
+            <p class="nota-fuerte">
+              Este sitio no afirma poderes psíquicos ni predice nada. Es un
+              entrenamiento de atención: aprender a distinguir el destello genuino
+              del relleno mental que la mente agrega después.
+            </p>
+          </details>
+
+          <button type="button" id="btn-comenzar" class="btn btn-primario">Comenzar una ronda</button>
+
+          <p class="meta-ronda" id="inicio-meta" hidden></p>
+        </div>
+      </section>
+
+      <!-- ============ PREPARACION ============ -->
+      <section class="pantalla pantalla-oscura" id="pantalla-preparacion" data-pantalla aria-labelledby="titulo-preparacion">
+        <div class="pantalla-cuerpo contenedor-angosto centrado">
+          <div class="punto-luz" aria-hidden="true"></div>
+          <h2 id="titulo-preparacion" class="visualmente-oculto">Preparación</h2>
+          <p class="texto-preparacion">Respira.</p>
+          <p class="texto-preparacion">Aquieta.</p>
+          <p class="texto-preparacion texto-preparacion-final">
+            En un momento habrá un blanco oculto que aún no puedes ver.
+            No adivines con la cabeza: espera lo que asome.
+          </p>
+          <button type="button" id="btn-listo" class="btn btn-fantasma">Estoy listo</button>
+        </div>
+      </section>
+
+      <!-- ============ CAPTURA ============ -->
+      <section class="pantalla" id="pantalla-captura" data-pantalla aria-labelledby="titulo-captura">
+        <div class="pantalla-cuerpo contenedor-angosto">
+          <div class="captura-encabezado">
+            <h2 id="titulo-captura">Tu primera impresión</h2>
+            <div class="temporizador" role="timer" aria-live="polite">
+              <div class="temporizador-pista">
+                <div class="temporizador-barra" id="captura-barra"></div>
+              </div>
+              <span class="temporizador-texto" id="captura-tiempo">45s</span>
+            </div>
+          </div>
+
+          <p class="ayuda">No pienses la respuesta. Anota lo que ya está ahí.</p>
+
+          <label class="campo-label" for="input-palabra">Una palabra</label>
+          <input type="text" id="input-palabra" class="campo-texto" maxlength="40" autocomplete="off" placeholder="lo primero que aparece" />
+
+          <fieldset class="campo-fieldset">
+            <legend>Temperatura</legend>
+            <div class="pildoras" data-grupo="temp">
+              <input type="radio" name="temp" id="temp-frio" value="frio" />
+              <label for="temp-frio">Frío</label>
+              <input type="radio" name="temp" id="temp-calido" value="calido" />
+              <label for="temp-calido">Cálido</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="campo-fieldset">
+            <legend>Luz</legend>
+            <div class="pildoras" data-grupo="luz">
+              <input type="radio" name="luz" id="luz-oscuro" value="oscuro" />
+              <label for="luz-oscuro">Oscuro</label>
+              <input type="radio" name="luz" id="luz-claro" value="claro" />
+              <label for="luz-claro">Claro</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="campo-fieldset">
+            <legend>Movimiento</legend>
+            <div class="pildoras" data-grupo="movimiento">
+              <input type="radio" name="movimiento" id="mov-quieto" value="quieto" />
+              <label for="mov-quieto">Quieto</label>
+              <input type="radio" name="movimiento" id="mov-movimiento" value="movimiento" />
+              <label for="mov-movimiento">En movimiento</label>
+            </div>
+          </fieldset>
+
+          <div class="campo-canvas">
+            <div class="campo-canvas-encabezado">
+              <label for="canvas-trazo">Trazo libre (opcional)</label>
+              <button type="button" id="btn-borrar-trazo" class="btn-texto">Borrar</button>
+            </div>
+            <canvas id="canvas-trazo" width="320" height="180" aria-label="Lienzo para un trazo libre de tu impresión"></canvas>
+            <p class="nota-pequena">El trazo se usa solo para tu propia comparación en esta ronda; no se guarda en el historial.</p>
+          </div>
+
+          <button type="button" id="btn-registrar" class="btn btn-primario">Registrar impresión</button>
+        </div>
+      </section>
+
+      <!-- ============ REVELACION ============ -->
+      <section class="pantalla" id="pantalla-revelacion" data-pantalla aria-labelledby="titulo-revelacion">
+        <div class="pantalla-cuerpo contenedor-angosto">
+          <h2 id="titulo-revelacion">El blanco era</h2>
+
+          <figure class="revelacion-figura">
+            <img id="revelacion-imagen" src="" alt="" />
+            <figcaption>
+              <span id="revelacion-nombre" class="revelacion-nombre"></span>
+              <span id="revelacion-categoria" class="revelacion-categoria"></span>
+            </figcaption>
+          </figure>
+
+          <ul class="etiquetas" id="revelacion-cualidades" aria-label="Cualidades del blanco"></ul>
+
+          <div class="recap">
+            <h3>Lo que anotaste antes</h3>
+            <dl class="recap-lista" id="revelacion-recap"></dl>
+          </div>
+
+          <p class="recordatorio-honestidad" id="revelacion-honestidad"></p>
+
+          <button type="button" id="btn-continuar-evaluacion" class="btn btn-primario">Continuar a la evaluación</button>
+        </div>
+      </section>
+
+      <!-- ============ EVALUACION ============ -->
+      <section class="pantalla" id="pantalla-evaluacion" data-pantalla aria-labelledby="titulo-evaluacion">
+        <div class="pantalla-cuerpo contenedor-angosto">
+          <h2 id="titulo-evaluacion">¿Qué resonó de verdad?</h2>
+          <p class="ayuda">Marca solo lo que ya estaba escrito antes de ver el blanco. No "casi", no forzado.</p>
+
+          <ul class="lista-evaluacion" id="evaluacion-lista"></ul>
+
+          <p class="recordatorio-honestidad" id="evaluacion-honestidad"></p>
+
+          <label class="campo-label" for="input-nota">Nota para tu historial (opcional)</label>
+          <textarea id="input-nota" class="campo-texto campo-textarea" maxlength="200" placeholder="algo que quieras recordar de esta ronda"></textarea>
+
+          <button type="button" id="btn-guardar-ronda" class="btn btn-primario">Guardar ronda</button>
+        </div>
+      </section>
+
+      <!-- ============ CIERRE ============ -->
+      <section class="pantalla" id="pantalla-cierre" data-pantalla aria-labelledby="titulo-cierre">
+        <div class="pantalla-cuerpo contenedor-angosto centrado">
+          <h2 id="titulo-cierre">Ronda guardada</h2>
+          <p class="cierre-resumen" id="cierre-resumen"></p>
+          <p class="parrafo-chico">
+            Una ronda no prueba nada. Es una marca más en una curva que solo tiene
+            sentido si eres constante y honesto contigo.
+          </p>
+          <div class="botonera">
+            <button type="button" id="btn-otra-ronda" class="btn btn-primario">Otra ronda</button>
+            <button type="button" id="btn-cierre-historial" class="btn btn-fantasma">Ver historial</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ HISTORIAL ============ -->
+      <section class="pantalla" id="pantalla-historial" data-pantalla aria-labelledby="titulo-historial">
+        <div class="pantalla-cuerpo contenedor-angosto">
+          <h2 id="titulo-historial">Tu historial</h2>
+          <p class="ayuda">
+            Ningún dato sale de este navegador. Se guarda solo en tu localStorage.
+          </p>
+
+          <div class="historial-resumen" id="historial-resumen"></div>
+
+          <p class="historial-vacio" id="historial-vacio" hidden>
+            Todavía no registraste ninguna ronda.
+          </p>
+
+          <ul class="historial-lista" id="historial-lista"></ul>
+
+          <div class="botonera">
+            <button type="button" id="btn-nueva-ronda-historial" class="btn btn-primario">Nueva ronda</button>
+            <button type="button" id="btn-borrar-historial" class="btn btn-texto">Borrar historial</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-disclaimer">
+        Este ejercicio no afirma poderes psíquicos ni predice el futuro. Es
+        entrenamiento de atención y honestidad perceptiva.
+      </p>
+      <nav class="footer-links" aria-label="Otras piezas de la serie">
+        <span>También en esta serie:</span>
+        <a href="https://fabianimv.github.io/mente-clara/">mente-clara</a>
+        <a href="https://fabianimv.github.io/senal-o-ruido/">señal o ruido</a>
+      </nav>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="js/targets.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

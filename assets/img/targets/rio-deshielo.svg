@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="riverSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcecf2"/>
+      <stop offset="100%" stop-color="#a9c7cf"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#riverSky)"/>
+  <polygon points="0,300 0,150 140,180 400,120 400,300" fill="#7a8f78"/>
+  <path d="M0,190 C80,170 120,220 200,190 S320,150 400,180 V300 H0 Z" fill="#bfe0e8"/>
+  <path d="M0,220 C90,205 130,245 220,220 S330,195 400,215 V300 H0 Z" fill="#dff2f6"/>
+</svg>
